@@ -1,0 +1,11 @@
+export { ReactComponent as LogoSvg } from './logo.svg';
+export { ReactComponent as BarChartSvg } from './bar_chart_square.svg';
+export { ReactComponent as OffersSvg } from './offers.svg';
+export { ReactComponent as BillingSvg } from './billing.svg';
+export { ReactComponent as HelpCircleSvg } from './help_circle_outline.svg';
+export { ReactComponent as MenuVerticalSvg } from './menu-vertical.svg';
+export { ReactComponent as FlagFillSvg } from './flag_fill.svg';
+export { ReactComponent as PrixtelSvg } from './prixtel.svg';
+export { ReactComponent as WaveOne } from './wave1.svg';
+export { ReactComponent as WaveTwo } from './wave2.svg';
+export { ReactComponent as HamburgerIcon } from './menu.svg';

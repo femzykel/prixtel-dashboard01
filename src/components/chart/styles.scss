@@ -1,0 +1,84 @@
+.chart {
+  grid-column: 1/3;
+  grid-row: 2;
+  background: var(--white);
+  padding: 16px 0;
+  border-radius: 16px;
+
+  &__heading {
+    width: var(--full);
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    padding: 0 16px;
+
+    > span {
+      background: var(--lighter-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 16px;
+      margin-right: 13px;
+
+      svg {
+        width: 19px;
+        height: 19px;
+        flex-shrink: 0;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  &__area {
+    padding: 0 5px;
+
+    svg {
+      g {
+        font-family: inherit !important;
+        font-size: 1rem;
+
+        text {
+          fill: var(--text-light);
+
+          &[text-anchor='middle'] {
+            transform: translateX(2.5%);
+          }
+        }
+
+        &[class^='raphael-group']:nth-last-child(2) {
+          > text {
+            display: none;
+          }
+        }
+
+        .raphael-group-64-plot-group {
+          > rect {
+            width: 100px;
+
+            &:nth-child(1) {
+              fill: var(--darker-secondary);
+            }
+
+            &:nth-child(2),
+            &:nth-child(5) {
+              fill: var(--light-blue);
+            }
+
+            &:nth-child(3) {
+              fill: var(--darker-grey);
+            }
+
+            &:nth-child(4) {
+              fill: var(--text-tertiary);
+            }
+          }
+        }
+      }
+    }
+  }
+}

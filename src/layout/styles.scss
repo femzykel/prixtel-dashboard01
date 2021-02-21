@@ -1,0 +1,117 @@
+.app_layout {
+  position: relative;
+
+  .hamburger {
+    display: none;
+    padding: 16px;
+    z-index: 60;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    z-index: 70;
+
+    @media (max-width: 1312px) {
+      display: block;
+    }
+
+    > button {
+      background: transparent;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      margin-left: auto;
+
+      > svg {
+        width: var(--full);
+        height: var(--full);
+      }
+    }
+  }
+
+  .backdrop {
+    position: fixed;
+    // display: none;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 50;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.4s ease-in-out;
+
+    @media (max-width: 1312px) {
+      &._show {
+        // display: block;
+        visibility: visible;
+        pointer-events: all;
+        opacity: 1;
+      }
+    }
+  }
+
+  .main {
+    background: var(--main-bg);
+    position: relative;
+    left: var(--page-header-width);
+    width: calc(100% - var(--page-header-width));
+    display: block;
+    padding: 48px 32px 32px;
+
+    @media (max-width: 1312px) {
+      left: 0;
+      width: var(--full);
+      padding-top: 100px;
+    }
+
+    &__heading {
+      width: var(--full);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 1008px) {
+        flex-direction: column;
+        justify-content: center;
+
+        ._heading_text {
+          margin-bottom: 16px;
+          text-align: center;
+        }
+      }
+
+      button {
+        background: var(--text-primary);
+        padding: 10px 13px;
+        color: var(--white);
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+    }
+
+    &__grid {
+      width: var(--full);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 20px;
+      margin-bottom: 60px;
+      gap: 30px 20px;
+
+      @media (max-width: 1008px) {
+        display: block;
+      }
+    }
+  }
+}
